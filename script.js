@@ -4,10 +4,9 @@ $(document).ready(function () {
     //Creating function for 'add' button, once clicked it saves information to users local storage for each hour 
     //of the calendar
     $(".saveBtn").on("click", function () {
-        console.log(this);
-        var text = $(this).siblings(".description").val();
-        var time = $(this).parent().attr("id");
-        localStorage.setItem(time, text);
+        var des = $(this).siblings(".description").val();
+        var tHour = $(this).parent().attr("id");
+        localStorage.setItem(tHour, des);
 })
     // Gets local storage value of the description from saved storage
     $("#hour1 .description").val(localStorage.getItem("hour1"));
